@@ -18,12 +18,12 @@ const ListingCard = ({ item, count, isSelected = false }) => {
         isSelected ? 'border-emerald-300 bg-emerald-50/40' : 'border-slate-200'
       }`}
     >
-      <div className="grid grid-cols-[1fr_auto] gap-x-3">
+      <div className="grid grid-cols-1 gap-x-3 sm:grid-cols-[1fr_auto]">
         <div>
-          <h4 className="whitespace-nowrap text-[22px] font-semibold leading-tight text-slate-900">{item.section}</h4>
+          <h4 className="text-lg font-semibold leading-tight text-slate-900 sm:whitespace-nowrap sm:text-[22px]">{item.section}</h4>
           {item.row ? <p className="mt-0.5 text-sm font-bold text-slate-900">{item.row}</p> : null}
         </div>
-        <div className="text-right">
+        <div className="text-left sm:text-right">
           {item.left ? (
             <span className={`inline-flex rounded-md px-2 py-1 text-xs font-bold leading-none ${getBadgeTone(item.left)}`}>
               {item.left}
@@ -56,10 +56,10 @@ const ListingCard = ({ item, count, isSelected = false }) => {
           </div>
         </div>
 
-        <div className="mt-0 text-right">
-          <p className="flex items-center justify-end gap-1 leading-none">
+        <div className="mt-1 text-left sm:mt-0 sm:text-right">
+          <p className="flex items-center justify-start gap-1 leading-none sm:justify-end">
             {item.oldPrice ? <span className="text-sm text-slate-400 line-through">{item.oldPrice}</span> : null}
-            <span className="text-3xl font-bold leading-none text-slate-900">{item.price}</span>
+            <span className="text-2xl font-bold leading-none text-slate-900 sm:text-3xl">{item.price}</span>
           </p>
           {item.rating ? (
             <span className="mt-1 inline-flex items-center gap-1 rounded-full bg-teal-100 px-2 py-1 text-xs font-semibold text-teal-800">

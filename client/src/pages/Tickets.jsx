@@ -115,7 +115,7 @@ const Tickets = () => {
 
   return (
     <div className="min-h-screen bg-slate-100">
-      <header className="flex items-center justify-between border-b border-slate-200 bg-white px-4 py-3 md:px-8">
+      <header className="flex flex-col items-start gap-3 border-b border-slate-200 bg-white px-4 py-3 sm:flex-row sm:items-center sm:justify-between md:px-8">
         <div className="flex items-center gap-3">
           <img
             src={stadiumThumb}
@@ -129,21 +129,21 @@ const Tickets = () => {
             <p className="text-sm font-semibold text-slate-600">Tue • Apr 7 • 7:30 PM <br /> ACA Stadium, Guwahati, Assam, India</p>
           </div>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 self-end sm:self-auto">
           <Link className="text-sm font-semibold text-lime-700" to="/">Back</Link>
         </div>
       </header>
 
       {/* Stadium Section */}
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 p-4 md:p-6 lg:grid-cols-[1.35fr_1fr]">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 p-3 sm:p-4 md:p-6 lg:grid-cols-[1.35fr_1fr]">
         <div className="rounded-2xl border border-slate-200 bg-white p-2">
           <StadiumCanvas selectedSeatId={selectedSeat?.id} onSeatSelect={handleSeatSelect} />
         </div>
 
         {/* Listing Section */}
-        <div className="rounded-2xl border border-slate-200 bg-white p-4">
-          <div className="mb-3 flex items-center justify-between">
-            <h3 className="text-2xl font-bold text-slate-900">{visibleListings.length} listings</h3>
+        <div className="rounded-2xl border border-slate-200 bg-white p-3 sm:p-4">
+          <div className="mb-3 flex items-center justify-between gap-2">
+            <h3 className="text-xl font-bold text-slate-900 sm:text-2xl">{visibleListings.length} listings</h3>
             <div className="flex items-center gap-2">
               <button type="button" className="grid h-9 w-9 place-items-center rounded-lg border border-lime-300 bg-lime-50 text-lime-700">
                 <ListFilter size={16} />

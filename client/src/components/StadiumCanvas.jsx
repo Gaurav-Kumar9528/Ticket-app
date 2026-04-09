@@ -25,7 +25,7 @@ const StadiumCanvas = ({ selectedSeatId, onSeatSelect }) => {
 
   return (
     <div className="relative">
-      <div className="relative h-[560px] w-full overflow-hidden rounded-xl bg-[#efeff1]">
+      <div className="relative h-[420px] w-full overflow-hidden rounded-xl bg-[#efeff1] sm:h-[500px] lg:h-[560px]">
         <div
           className="relative h-full w-full origin-center transition-transform duration-200"
           style={{ transform: `scale(${zoom})` }}
@@ -48,8 +48,8 @@ const StadiumCanvas = ({ selectedSeatId, onSeatSelect }) => {
               style={{
                 left: `${zone.x}%`,
                 top: `${zone.y}%`,
-                width: `${zone.w}px`,
-                height: `${zone.h}px`,
+                width: `min(${zone.w}px, 34vw)`,
+                height: `min(${zone.h}px, 34vw)`,
                 transform: `translate(-50%, -50%) rotate(${zone.rotate}deg)`,
               }}
               aria-label={`Select ${zone.label}`}

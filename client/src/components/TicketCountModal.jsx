@@ -6,13 +6,13 @@ const TicketCountModal = ({ ticketCount, onChange, onContinue }) => {
 
   return (
     <div className="fixed inset-0 z-50 grid place-items-center bg-black/45 p-4">
-      <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
-        <h2 className="flex items-center justify-center mb-4  text-4xl font-bold text-slate-900">How many tickets?</h2>
+      <div className="w-full max-w-md rounded-2xl bg-white p-4 shadow-xl sm:p-6">
+        <h2 className="mb-4 flex items-center justify-center text-3xl font-bold text-slate-900 sm:text-4xl">How many tickets?</h2>
 
         <select
           value={ticketCount}
           onChange={(e) => onChange(e.target.value)}
-          className="mb-4 h-12 w-full rounded-lg border border-slate-300 px-3 text-lg outline-none focus:border-lime-500"
+          className="mb-4 h-12 w-full rounded-lg border border-slate-300 px-3 text-base outline-none focus:border-lime-500 sm:text-lg"
         >
           <option value="any">Any</option>
           <option value={1}>1 ticket</option>
