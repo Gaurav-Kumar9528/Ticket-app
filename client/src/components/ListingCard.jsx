@@ -40,8 +40,8 @@ const ListingCard = ({ item, count, isSelected = false }) => {
               </span>
               {item.together || `${count} tickets together`}
             </p>
-            <h1 className="flex items-center gap-1"><Download size={13} strokeWidth={2.4} /> {item.delivery}</h1>
-            <h1 className="flex items-center gap-1"><Eye size={13} strokeWidth={2.4} /> {item.view}</h1>
+            <p className="flex items-center gap-1"><Download size={13} strokeWidth={2.4} /> {item.delivery}</p>
+            <p className="flex items-center gap-1"><Eye size={13} strokeWidth={2.4} /> {item.view}</p>
           </div>
 
           <div className="mt-2 flex items-center gap-2 text-xs font-semibold">
